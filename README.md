@@ -126,6 +126,12 @@ Every top-level feed includes `schema_version`, `generated_at`, sources, license
 
 ## Agent Skill
 
+Install the `vibemath` Skill globally for Codex in one command:
+
+```bash
+npx skills add cyanseek/VibeMath --skill vibemath -g -a codex -y
+```
+
 The skill supports requests such as:
 
 - “What AI mathematics events changed in the past week?”

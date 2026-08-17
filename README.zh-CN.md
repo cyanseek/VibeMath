@@ -126,6 +126,12 @@ GitHub Pages 提供每日构建快照，而不是实时数据库：
 
 ## Agent Skill
 
+一条命令将 `vibemath` Skill 全局安装到 Codex：
+
+```bash
+npx skills add cyanseek/VibeMath --skill vibemath -g -a codex -y
+```
+
 Skill 支持：
 
 - “过去一周 AI 数学发生了什么？”
