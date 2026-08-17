@@ -1,0 +1,28 @@
+[
+  {
+    "problem_id": "vibemathed:composites-among-xi-7-n",
+    "replay_type": "verification_replay",
+    "reason": "Public evidence is available and the source-reported verification meets the configured floor; this is a triage signal, not a success forecast.",
+    "required_exposure": "result_only",
+    "contamination_risks": [
+      "The model may have seen the public result during training.",
+      "Statement fidelity and method independence require separate checks."
+    ],
+    "recommended_lhf_mode": "verify",
+    "verification_level": "lean_checked_statement_unaudited",
+    "event_date": "2026-08-15T00:00:00.000Z"
+  },
+  {
+    "problem_id": "vibemathed:erdos-planar-unit-distance",
+    "replay_type": "method_aware",
+    "reason": "Public evidence is available and the source-reported verification meets the configured floor; this is a triage signal, not a success forecast.",
+    "required_exposure": "method_aware",
+    "contamination_risks": [
+      "The model may have seen the public result during training.",
+      "Statement fidelity and method independence require separate checks."
+    ],
+    "recommended_lhf_mode": "replay",
+    "verification_level": "independent_expert_verified",
+    "event_date": "2026-05-27T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "source": "vibemath",
+  "problem_id": "vibemathed:composites-among-xi-7-n",
+  "title": "Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+  "canonical_statement": "For every real $\\xi>0$ the sequence of integer parts $[\\xi 7^{n}]$, $n=0,1,2,\\dots$, contains infinitely many composite numbers. Second, there is no infinite right truncatable prime in base 7.",
+  "plain_summary": "VibeMathed reports this item as resolved. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+  "current_status": "resolved",
+  "solution_events": [
+    {
+      "id": "vibemathed:composites-among-xi-7-n:event",
+      "problem_id": "vibemathed:composites-among-xi-7-n",
+      "type": "proved",
+      "status": "resolved",
+      "occurred_at": "2026-08-15T00:00:00.000Z",
+      "title": "On the composites among [ξ7ⁿ]",
+      "summary": "VibeMathed reports this item as resolved. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "ai_contribution": "ai_discovered",
+      "attempt_ids": [
+        "vibemathed:composites-among-xi-7-n:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:composites-among-xi-7-n:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:composites-among-xi-7-n:assertion"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "id": "vibemathed:composites-among-xi-7-n:attempt",
+      "problem_id": "vibemathed:composites-among-xi-7-n",
+      "model": "Fable 5, Opus 4.8",
+      "provider": "Anthropic",
+      "attempted_at": "2026-08-15T00:00:00.000Z",
+      "human_collaborators": [],
+      "exposure": "unknown",
+      "prompt_public": null,
+      "outcome": "The source reports an AI-produced computational route, certificate, Lean formalization, and draft under human direction.",
+      "failed_routes": [],
+      "artifacts": [
+        {
+          "label": "Lean development, data and generating programs",
+          "url": "https://github.com/rwst/On-Composites",
+          "kind": "lean-proof",
+          "license": null
+        }
+      ],
+      "sources": [
+        {
+          "label": "On the composites among [ξ7ⁿ]",
+          "url": "https://www.researchgate.net/publication/412294027_On_the_composites_among_x7",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+          "url": "https://vibemathed.com/problem/composites-among-xi-7-n",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "cost_usd": null,
+      "independence": "unknown"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "vibemathed:composites-among-xi-7-n:verification",
+      "problem_id": "vibemathed:composites-among-xi-7-n",
+      "solution_event_id": "vibemathed:composites-among-xi-7-n:event",
+      "level": "lean_checked_statement_unaudited",
+      "mathematical_correctness": "supported",
+      "statement_fidelity": "audited",
+      "peer_review": "none",
+      "verifier": "VibeMathed (source-reported label)",
+      "verified_at": null,
+      "note": "VibeMathed reports a source audit with a documented native_decide boundary; VibeMath did not compile or independently audit it.",
+      "sources": [
+        {
+          "label": "VibeMathed: Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+          "url": "https://vibemathed.com/problem/composites-among-xi-7-n",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        },
+        {
+          "label": "On the composites among [ξ7ⁿ]",
+          "url": "https://www.researchgate.net/publication/412294027_On_the_composites_among_x7",
+          "kind": "primary-mathematical-source",
+          "license": null
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "On the composites among [ξ7ⁿ]",
+      "url": "https://www.researchgate.net/publication/412294027_On_the_composites_among_x7",
+      "kind": "primary-mathematical-source",
+      "license": null
+    },
+    {
+      "label": "VibeMathed: Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+      "url": "https://vibemathed.com/problem/composites-among-xi-7-n",
+      "kind": "source-assertion",
+      "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+    }
+  ],
+  "recommended_mode": "verify",
+  "recommended_exposure": "result_only",
+  "opportunity_signals": [
+    {
+      "id": "vibemathed:composites-among-xi-7-n:signal:replay_ready",
+      "problem_id": "vibemathed:composites-among-xi-7-n",
+      "kind": "replay_ready",
+      "reason": "A public source and a non-unreviewed verification label support replay triage.",
+      "generated_at": "2026-08-17T15:54:39.560Z"
+    }
+  ],
+  "uncertainties": [
+    "VibeMath has not independently verified the mathematical claim.",
+    "AI-attempt independence and training-data exposure are unknown unless explicitly documented."
+  ],
+  "generated_at": "2026-08-17T15:54:39.560Z"
+}

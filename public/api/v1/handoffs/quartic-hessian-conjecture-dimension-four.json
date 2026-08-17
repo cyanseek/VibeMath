@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0.0",
+  "source": "vibemath",
+  "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+  "title": "The Quartic Hessian Conjecture in Dimension Four",
+  "canonical_statement": "The Hessian conjecture is open exactly in dimension four. The source reports a proof for every quartic polynomial in dimension four, a proper slice of the full open problem.",
+  "plain_summary": "VibeMathed reports this item as partial. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+  "current_status": "partial",
+  "solution_events": [
+    {
+      "id": "vibemathed:quartic-hessian-conjecture-dimension-four:event",
+      "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+      "type": "proved",
+      "status": "partial",
+      "occurred_at": "2026-08-14T00:00:00.000Z",
+      "title": "The Quartic Hessian Conjecture in Dimension Four",
+      "summary": "VibeMathed reports this item as partial. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "ai_contribution": "ai_assisted",
+      "attempt_ids": [
+        "vibemathed:quartic-hessian-conjecture-dimension-four:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:quartic-hessian-conjecture-dimension-four:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:quartic-hessian-conjecture-dimension-four:assertion"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "id": "vibemathed:quartic-hessian-conjecture-dimension-four:attempt",
+      "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+      "model": "GPT-5.6 Sol, GPT-5.6 Luna, Claude Fable 5, DeepSeek V4 Pro",
+      "provider": "OpenAI, Anthropic, DeepSeek",
+      "attempted_at": "2026-08-14T00:00:00.000Z",
+      "human_collaborators": [
+        "Zixiang Ni"
+      ],
+      "exposure": "unknown",
+      "prompt_public": null,
+      "outcome": "The source credits AI systems with exploring candidate arguments, adversarial review, algebraic checking, and editorial assistance.",
+      "failed_routes": [],
+      "artifacts": [],
+      "sources": [
+        {
+          "label": "The Quartic Hessian Conjecture in Dimension Four",
+          "url": "https://arxiv.org/abs/2608.14217",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: The Quartic Hessian Conjecture in Dimension Four",
+          "url": "https://vibemathed.com/problem/quartic-hessian-conjecture-dimension-four",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "cost_usd": null,
+      "independence": "unknown"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "vibemathed:quartic-hessian-conjecture-dimension-four:verification",
+      "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+      "solution_event_id": "vibemathed:quartic-hessian-conjecture-dimension-four:event",
+      "level": "unreviewed",
+      "mathematical_correctness": "unknown",
+      "statement_fidelity": "unaudited",
+      "peer_review": "none",
+      "verifier": "VibeMathed (source-reported label)",
+      "verified_at": null,
+      "note": "VibeMathed reports a days-old sole-author preprint and no independent review.",
+      "sources": [
+        {
+          "label": "VibeMathed: The Quartic Hessian Conjecture in Dimension Four",
+          "url": "https://vibemathed.com/problem/quartic-hessian-conjecture-dimension-four",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        },
+        {
+          "label": "The Quartic Hessian Conjecture in Dimension Four",
+          "url": "https://arxiv.org/abs/2608.14217",
+          "kind": "primary-mathematical-source",
+          "license": null
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "The Quartic Hessian Conjecture in Dimension Four",
+      "url": "https://arxiv.org/abs/2608.14217",
+      "kind": "primary-mathematical-source",
+      "license": null
+    },
+    {
+      "label": "VibeMathed: The Quartic Hessian Conjecture in Dimension Four",
+      "url": "https://vibemathed.com/problem/quartic-hessian-conjecture-dimension-four",
+      "kind": "source-assertion",
+      "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+    }
+  ],
+  "recommended_mode": "expand",
+  "recommended_exposure": "result_only",
+  "opportunity_signals": [
+    {
+      "id": "vibemathed:quartic-hessian-conjecture-dimension-four:signal:recent_partial_result",
+      "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+      "kind": "recent_partial_result",
+      "reason": "A source-reported partial result may support bounded expansion.",
+      "generated_at": "2026-08-17T15:54:39.560Z"
+    }
+  ],
+  "uncertainties": [
+    "VibeMath has not independently verified the mathematical claim.",
+    "AI-attempt independence and training-data exposure are unknown unless explicitly documented."
+  ],
+  "generated_at": "2026-08-17T15:54:39.560Z"
+}

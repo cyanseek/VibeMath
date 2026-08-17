@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "source": "vibemath",
+  "problem_id": "vibemathed:erdos-267",
+  "title": "Erdős Problem #267",
+  "canonical_statement": "If $n_1<n_2<\\cdots$ with $n_{k+1}/n_k\\ge c>1$, must $\\sum_k 1/F_{n_k}$ be irrational? The proposed proof closes the range $1<c<2$ left open by earlier criteria.",
+  "plain_summary": "VibeMathed reports this item as candidate. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+  "current_status": "candidate",
+  "solution_events": [
+    {
+      "id": "vibemathed:erdos-267:event",
+      "problem_id": "vibemathed:erdos-267",
+      "type": "proved",
+      "status": "candidate",
+      "occurred_at": "2026-07-13T00:00:00.000Z",
+      "title": "erdosproblems.com/267",
+      "summary": "VibeMathed reports this item as candidate. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "ai_contribution": "ai_discovered",
+      "attempt_ids": [
+        "vibemathed:erdos-267:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:erdos-267:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:erdos-267:assertion"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "id": "vibemathed:erdos-267:attempt",
+      "problem_id": "vibemathed:erdos-267",
+      "model": "GPT-5.6 starships (Claude Fable 5 reviewer)",
+      "provider": "OpenAI / Anthropic",
+      "attempted_at": "2026-07-13T00:00:00.000Z",
+      "human_collaborators": [],
+      "exposure": "unknown",
+      "prompt_public": null,
+      "outcome": "Produced by the GPT-5.6 starships pipeline with Claude Fable 5 as reviewer, according to the source.",
+      "failed_routes": [],
+      "artifacts": [],
+      "sources": [
+        {
+          "label": "erdosproblems.com/267",
+          "url": "https://www.erdosproblems.com/267",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: Erdős Problem #267",
+          "url": "https://vibemathed.com/problem/erdos-267",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "cost_usd": null,
+      "independence": "unknown"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "vibemathed:erdos-267:verification",
+      "problem_id": "vibemathed:erdos-267",
+      "solution_event_id": "vibemathed:erdos-267:event",
+      "level": "lean_verified_statement_audited",
+      "mathematical_correctness": "supported",
+      "statement_fidelity": "audited",
+      "peer_review": "none",
+      "verifier": "VibeMathed (source-reported label)",
+      "verified_at": null,
+      "note": "The source reports a Lean check while the Erdős Problems community status remains pending; status therefore remains candidate.",
+      "sources": [
+        {
+          "label": "VibeMathed: Erdős Problem #267",
+          "url": "https://vibemathed.com/problem/erdos-267",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        },
+        {
+          "label": "erdosproblems.com/267",
+          "url": "https://www.erdosproblems.com/267",
+          "kind": "primary-mathematical-source",
+          "license": null
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "erdosproblems.com/267",
+      "url": "https://www.erdosproblems.com/267",
+      "kind": "primary-mathematical-source",
+      "license": null
+    },
+    {
+      "label": "VibeMathed: Erdős Problem #267",
+      "url": "https://vibemathed.com/problem/erdos-267",
+      "kind": "source-assertion",
+      "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+    }
+  ],
+  "recommended_mode": "verify",
+  "recommended_exposure": "result_only",
+  "opportunity_signals": [
+    {
+      "id": "vibemathed:erdos-267:signal:verify_now",
+      "problem_id": "vibemathed:erdos-267",
+      "kind": "verify_now",
+      "reason": "The source labels this result as a candidate; verification should precede reuse.",
+      "generated_at": "2026-08-17T15:54:39.560Z"
+    }
+  ],
+  "uncertainties": [
+    "The source status is candidate and must not be represented as solved.",
+    "VibeMath has not independently verified the mathematical claim.",
+    "AI-attempt independence and training-data exposure are unknown unless explicitly documented."
+  ],
+  "generated_at": "2026-08-17T15:54:39.560Z"
+}

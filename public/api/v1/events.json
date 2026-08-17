@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-17T15:54:39.560Z",
+  "sources": [
+    {
+      "id": "vibemathed",
+      "url": "https://vibemathed.com/api/dataset",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "coverage": "Federated schema with 5 records in the bundled VibeMathed snapshot; not a complete map of mathematics.",
+  "data": [
+    {
+      "id": "vibemathed:composites-among-xi-7-n:event",
+      "problem_id": "vibemathed:composites-among-xi-7-n",
+      "type": "proved",
+      "status": "resolved",
+      "occurred_at": "2026-08-15T00:00:00.000Z",
+      "title": "On the composites among [ξ7ⁿ]",
+      "summary": "VibeMathed reports this item as resolved. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "ai_contribution": "ai_discovered",
+      "attempt_ids": [
+        "vibemathed:composites-among-xi-7-n:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:composites-among-xi-7-n:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:composites-among-xi-7-n:assertion"
+      ]
+    },
+    {
+      "id": "vibemathed:erdos-planar-unit-distance:event",
+      "problem_id": "vibemathed:erdos-planar-unit-distance",
+      "type": "disproved",
+      "status": "resolved",
+      "occurred_at": "2026-05-27T00:00:00.000Z",
+      "title": "Remarks on the disproof of the unit distance conjecture",
+      "summary": "The asymptotic conjecture was disproved; this does not determine the exact unit-distance extremal function.",
+      "ai_contribution": "ai_co_developed",
+      "attempt_ids": [
+        "vibemathed:erdos-planar-unit-distance:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:erdos-planar-unit-distance:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:erdos-planar-unit-distance:assertion"
+      ]
+    },
+    {
+      "id": "vibemathed:quartic-hessian-conjecture-dimension-four:event",
+      "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+      "type": "proved",
+      "status": "partial",
+      "occurred_at": "2026-08-14T00:00:00.000Z",
+      "title": "The Quartic Hessian Conjecture in Dimension Four",
+      "summary": "VibeMathed reports this item as partial. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "ai_contribution": "ai_assisted",
+      "attempt_ids": [
+        "vibemathed:quartic-hessian-conjecture-dimension-four:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:quartic-hessian-conjecture-dimension-four:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:quartic-hessian-conjecture-dimension-four:assertion"
+      ]
+    },
+    {
+      "id": "vibemathed:erdos-267:event",
+      "problem_id": "vibemathed:erdos-267",
+      "type": "proved",
+      "status": "candidate",
+      "occurred_at": "2026-07-13T00:00:00.000Z",
+      "title": "erdosproblems.com/267",
+      "summary": "VibeMathed reports this item as candidate. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "ai_contribution": "ai_discovered",
+      "attempt_ids": [
+        "vibemathed:erdos-267:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:erdos-267:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:erdos-267:assertion"
+      ]
+    },
+    {
+      "id": "vibemathed:erdos-7:event",
+      "problem_id": "vibemathed:erdos-7",
+      "type": "retracted",
+      "status": "retracted",
+      "occurred_at": null,
+      "title": "erdosproblems.com/7",
+      "summary": "VibeMathed reports this item as retracted. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "ai_contribution": "unclear",
+      "attempt_ids": [
+        "vibemathed:erdos-7:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:erdos-7:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:erdos-7:assertion"
+      ]
+    }
+  ],
+  "build_id": "sha256:b92b1c5555099cd10a7354bd2330f4cd396ad15fbedc7744fd6692b0f06d9953"
+}

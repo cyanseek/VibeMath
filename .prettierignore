@@ -1,0 +1,9 @@
+node_modules
+dist
+pnpm-lock.yaml
+data/raw
+data/normalized
+data/derived
+public/api
+schemas
+mydoc_local_vibemath

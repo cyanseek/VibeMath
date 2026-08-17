@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Methodology and claim policy — VibeMath">
+  <article class="shell narrow">
+    <p class="eyebrow">Methodology</p>
+    <h1>Track claims.<br />Show boundaries.</h1>
+    <p>
+      VibeMath is an evidence ledger and action index, not an authority that
+      declares theorems true. Every imported state remains a source assertion. A
+      result type such as <em>proved</em> or <em>counterexample</em> is separate from
+      the aggregate status and from verification.
+    </p>
+
+    <h2>Aggregation</h2>
+    <p>
+      Sources are normalized into a common vocabulary without overwriting their
+      raw fields. If sources disagree, the assertions remain side by side and
+      the aggregate status explains the conflict. The current v0.0.1 seed has
+      one upstream, so it cannot establish cross-source consensus.
+    </p>
+
+    <h2>Verification is multidimensional</h2>
+    <p>
+      VibeMath records mathematical correctness, statement fidelity, and peer
+      review separately. Lean compilation does not by itself show that a formal
+      statement faithfully matches an informal conjecture. A source audit is not
+      a reproduction.
+    </p>
+
+    <h2>Replay-ready</h2>
+    <p>
+      The default rule requires a public primary source, a status other than
+      candidate, contested, retracted, or open, and verification at or above
+      source-audited. It recommends result-only, method-aware, verification, or
+      aftershock replay. It never predicts success.
+    </p>
+
+    <h2>Claim language</h2>
+    <p>
+      Supported labels include tracked, reported, candidate, source-audited,
+      mechanically verified, Lean-checked, independently expert-verified,
+      partial, contested, retracted, and replay-ready. Words such as solved,
+      proved, disproved, first, independent, novel, and peer reviewed require
+      explicit structured evidence and visible sources.
+    </p>
+
+    <h2>Security boundary</h2>
+    <p>
+      Adapters parse data only. VibeMath does not execute code, scripts,
+      prompts, or instructions found in upstream sources. URLs are restricted to
+      HTTP(S). The MCP server is read-only and uses the local snapshot.
+    </p>
+
+    <p>
+      See the repository documents <a
+        href="https://github.com/cyanseek/VibeMath/blob/main/METHODOLOGY.md"
+        >METHODOLOGY.md</a
+      > and <a
+        href="https://github.com/cyanseek/VibeMath/blob/main/CLAIM_POLICY.md"
+        >CLAIM_POLICY.md</a
+      > for the auditable specification.
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "source": "vibemath",
+  "problem_id": "vibemathed:erdos-7",
+  "title": "Erdős Problem #7",
+  "canonical_statement": "Can there be a finite covering system of the integers with distinct moduli, all odd and greater than one?",
+  "plain_summary": "VibeMathed reports this item as retracted. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+  "current_status": "retracted",
+  "solution_events": [
+    {
+      "id": "vibemathed:erdos-7:event",
+      "problem_id": "vibemathed:erdos-7",
+      "type": "retracted",
+      "status": "retracted",
+      "occurred_at": null,
+      "title": "erdosproblems.com/7",
+      "summary": "VibeMathed reports this item as retracted. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "ai_contribution": "unclear",
+      "attempt_ids": [
+        "vibemathed:erdos-7:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:erdos-7:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:erdos-7:assertion"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "id": "vibemathed:erdos-7:attempt",
+      "problem_id": "vibemathed:erdos-7",
+      "model": null,
+      "provider": null,
+      "attempted_at": null,
+      "human_collaborators": [],
+      "exposure": "unknown",
+      "prompt_public": null,
+      "outcome": null,
+      "failed_routes": [],
+      "artifacts": [],
+      "sources": [
+        {
+          "label": "erdosproblems.com/7",
+          "url": "https://www.erdosproblems.com/7",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: Erdős Problem #7",
+          "url": "https://vibemathed.com/problem/erdos-7",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "cost_usd": null,
+      "independence": "unknown"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "vibemathed:erdos-7:verification",
+      "problem_id": "vibemathed:erdos-7",
+      "solution_event_id": "vibemathed:erdos-7:event",
+      "level": "rejected",
+      "mathematical_correctness": "rejected",
+      "statement_fidelity": "unaudited",
+      "peer_review": "none",
+      "verifier": "VibeMathed (source-reported label)",
+      "verified_at": null,
+      "note": "VibeMathed records the claim as retracted after audit.",
+      "sources": [
+        {
+          "label": "VibeMathed: Erdős Problem #7",
+          "url": "https://vibemathed.com/problem/erdos-7",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        },
+        {
+          "label": "erdosproblems.com/7",
+          "url": "https://www.erdosproblems.com/7",
+          "kind": "primary-mathematical-source",
+          "license": null
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "erdosproblems.com/7",
+      "url": "https://www.erdosproblems.com/7",
+      "kind": "primary-mathematical-source",
+      "license": null
+    },
+    {
+      "label": "VibeMathed: Erdős Problem #7",
+      "url": "https://vibemathed.com/problem/erdos-7",
+      "kind": "source-assertion",
+      "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+    }
+  ],
+  "recommended_mode": "verify",
+  "recommended_exposure": "result_only",
+  "opportunity_signals": [
+    {
+      "id": "vibemathed:erdos-7:signal:watch_only",
+      "problem_id": "vibemathed:erdos-7",
+      "kind": "watch_only",
+      "reason": "Current public evidence does not meet the default replay threshold.",
+      "generated_at": "2026-08-17T15:54:39.560Z"
+    }
+  ],
+  "uncertainties": [
+    "VibeMath has not independently verified the mathematical claim.",
+    "AI-attempt independence and training-data exposure are unknown unless explicitly documented."
+  ],
+  "generated_at": "2026-08-17T15:54:39.560Z"
+}

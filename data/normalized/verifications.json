@@ -1,0 +1,132 @@
+[
+  {
+    "id": "vibemathed:composites-among-xi-7-n:verification",
+    "problem_id": "vibemathed:composites-among-xi-7-n",
+    "solution_event_id": "vibemathed:composites-among-xi-7-n:event",
+    "level": "lean_checked_statement_unaudited",
+    "mathematical_correctness": "supported",
+    "statement_fidelity": "audited",
+    "peer_review": "none",
+    "verifier": "VibeMathed (source-reported label)",
+    "verified_at": null,
+    "note": "VibeMathed reports a source audit with a documented native_decide boundary; VibeMath did not compile or independently audit it.",
+    "sources": [
+      {
+        "label": "VibeMathed: Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+        "url": "https://vibemathed.com/problem/composites-among-xi-7-n",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      },
+      {
+        "label": "On the composites among [ξ7ⁿ]",
+        "url": "https://www.researchgate.net/publication/412294027_On_the_composites_among_x7",
+        "kind": "primary-mathematical-source",
+        "license": null
+      }
+    ]
+  },
+  {
+    "id": "vibemathed:erdos-planar-unit-distance:verification",
+    "problem_id": "vibemathed:erdos-planar-unit-distance",
+    "solution_event_id": "vibemathed:erdos-planar-unit-distance:event",
+    "level": "independent_expert_verified",
+    "mathematical_correctness": "supported",
+    "statement_fidelity": "unaudited",
+    "peer_review": "none",
+    "verifier": "VibeMathed (source-reported label)",
+    "verified_at": null,
+    "note": "VibeMathed reports human expert verification and an arXiv write-up; VibeMath preserves that label as a source assertion.",
+    "sources": [
+      {
+        "label": "VibeMathed: Erdős's Planar Unit Distance Conjecture",
+        "url": "https://vibemathed.com/problem/erdos-planar-unit-distance",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      },
+      {
+        "label": "Remarks on the disproof of the unit distance conjecture",
+        "url": "https://arxiv.org/abs/2605.20695",
+        "kind": "primary-mathematical-source",
+        "license": null
+      }
+    ]
+  },
+  {
+    "id": "vibemathed:quartic-hessian-conjecture-dimension-four:verification",
+    "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+    "solution_event_id": "vibemathed:quartic-hessian-conjecture-dimension-four:event",
+    "level": "unreviewed",
+    "mathematical_correctness": "unknown",
+    "statement_fidelity": "unaudited",
+    "peer_review": "none",
+    "verifier": "VibeMathed (source-reported label)",
+    "verified_at": null,
+    "note": "VibeMathed reports a days-old sole-author preprint and no independent review.",
+    "sources": [
+      {
+        "label": "VibeMathed: The Quartic Hessian Conjecture in Dimension Four",
+        "url": "https://vibemathed.com/problem/quartic-hessian-conjecture-dimension-four",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      },
+      {
+        "label": "The Quartic Hessian Conjecture in Dimension Four",
+        "url": "https://arxiv.org/abs/2608.14217",
+        "kind": "primary-mathematical-source",
+        "license": null
+      }
+    ]
+  },
+  {
+    "id": "vibemathed:erdos-267:verification",
+    "problem_id": "vibemathed:erdos-267",
+    "solution_event_id": "vibemathed:erdos-267:event",
+    "level": "lean_verified_statement_audited",
+    "mathematical_correctness": "supported",
+    "statement_fidelity": "audited",
+    "peer_review": "none",
+    "verifier": "VibeMathed (source-reported label)",
+    "verified_at": null,
+    "note": "The source reports a Lean check while the Erdős Problems community status remains pending; status therefore remains candidate.",
+    "sources": [
+      {
+        "label": "VibeMathed: Erdős Problem #267",
+        "url": "https://vibemathed.com/problem/erdos-267",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      },
+      {
+        "label": "erdosproblems.com/267",
+        "url": "https://www.erdosproblems.com/267",
+        "kind": "primary-mathematical-source",
+        "license": null
+      }
+    ]
+  },
+  {
+    "id": "vibemathed:erdos-7:verification",
+    "problem_id": "vibemathed:erdos-7",
+    "solution_event_id": "vibemathed:erdos-7:event",
+    "level": "rejected",
+    "mathematical_correctness": "rejected",
+    "statement_fidelity": "unaudited",
+    "peer_review": "none",
+    "verifier": "VibeMathed (source-reported label)",
+    "verified_at": null,
+    "note": "VibeMathed records the claim as retracted after audit.",
+    "sources": [
+      {
+        "label": "VibeMathed: Erdős Problem #7",
+        "url": "https://vibemathed.com/problem/erdos-7",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      },
+      {
+        "label": "erdosproblems.com/7",
+        "url": "https://www.erdosproblems.com/7",
+        "kind": "primary-mathematical-source",
+        "license": null
+      }
+    ]
+  }
+]

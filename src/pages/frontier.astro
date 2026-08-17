@@ -1,0 +1,100 @@
+---
+import ProblemCard from "../components/ProblemCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { normalizedData, replayCandidates } from "../lib/data";
+
+const statuses = [
+  "open",
+  "attempted",
+  "partial",
+  "candidate",
+  "resolved",
+  "contested",
+  "retracted",
+];
+const fields = [
+  ...new Set(normalizedData.problems.flatMap((problem) => problem.fields)),
+].sort();
+const verificationByProblem = new Map(
+  normalizedData.verifications.map((item) => [item.problem_id, item.level]),
+);
+---
+
+<BaseLayout
+  title="Frontier — VibeMath"
+  description="Search open, partial, candidate, resolved, contested and retracted AI mathematics claims."
+>
+  <section class="shell">
+    <p class="eyebrow">Federated frontier</p>
+    <h1>Search what is known.</h1>
+    <p class="coverage">
+      Coverage currently reflects the checked-in VibeMathed seed or the most
+      recent successful sync. It does not represent every open problem or AI
+      attempt in mathematics.
+    </p>
+    <div class="filters">
+      <input
+        id="query"
+        type="search"
+        placeholder="Search title, statement, field…"
+        aria-label="Search"
+      />
+      <select id="status" aria-label="Filter by status">
+        <option value="">All statuses</option>
+        {statuses.map((status) => <option value={status}>{status}</option>)}
+      </select>
+      <select id="field" aria-label="Filter by field">
+        <option value="">All fields</option>
+        {fields.map((field) => <option value={field}>{field}</option>)}
+      </select>
+    </div>
+    <p id="result-count">{normalizedData.problems.length} records</p>
+    <div id="results" class="grid">
+      {
+        normalizedData.problems.map((problem) => (
+          <ProblemCard
+            problem={problem}
+            verification={verificationByProblem.get(problem.id)}
+            replay={replayCandidates.some(
+              (item) => item.problem_id === problem.id,
+            )}
+          />
+        ))
+      }
+    </div>
+    <p id="empty" class="empty" hidden>No records match these filters.</p>
+  </section>
+  <script>
+    const query = document.querySelector("#query");
+    const status = document.querySelector("#status");
+    const field = document.querySelector("#field");
+    const cards = [...document.querySelectorAll(".searchable")];
+    const count = document.querySelector("#result-count");
+    const empty = document.querySelector("#empty");
+    const apply = () => {
+      const q =
+        query instanceof HTMLInputElement
+          ? query.value.trim().toLowerCase()
+          : "";
+      const s = status instanceof HTMLSelectElement ? status.value : "";
+      const f = field instanceof HTMLSelectElement ? field.value : "";
+      let visible = 0;
+      for (const card of cards) {
+        if (!(card instanceof HTMLElement)) continue;
+        const show =
+          (!q || card.dataset.search?.includes(q)) &&
+          (!s || card.dataset.status === s) &&
+          (!f || card.dataset.field === f);
+        card.hidden = !show;
+        if (show) visible += 1;
+      }
+      if (count) count.textContent = `${visible} records`;
+      if (empty instanceof HTMLElement) empty.hidden = visible !== 0;
+    };
+    const initial = new URLSearchParams(window.location.search).get("q") ?? "";
+    if (query instanceof HTMLInputElement) query.value = initial;
+    for (const element of [query, status, field])
+      element?.addEventListener("input", apply);
+    apply();
+  </script>
+</BaseLayout>

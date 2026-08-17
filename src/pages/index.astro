@@ -1,0 +1,160 @@
+---
+import ProblemCard from "../components/ProblemCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { normalizedData, replayCandidates, snapshot } from "../lib/data";
+
+const base = import.meta.env.BASE_URL;
+const latest = [...normalizedData.solutionEvents]
+  .sort((a, b) => (b.occurred_at ?? "").localeCompare(a.occurred_at ?? ""))
+  .slice(0, 4);
+const problems = latest
+  .map((event) =>
+    normalizedData.problems.find((problem) => problem.id === event.problem_id),
+  )
+  .filter((problem) => problem !== undefined);
+const counts = Object.fromEntries(
+  ["resolved", "candidate", "partial", "retracted"].map((status) => [
+    status,
+    normalizedData.problems.filter(
+      (problem) => problem.current_status === status,
+    ).length,
+  ]),
+);
+const verificationByProblem = new Map(
+  normalizedData.verifications.map((item) => [item.problem_id, item.level]),
+);
+---
+
+<BaseLayout>
+  <section class="hero">
+    <p class="eyebrow">The Live Frontier of AI Mathematics</p>
+    <h1>VibeMath</h1>
+    <p class="subtitle">
+      Know what AI has solved in mathematics, what remains open, and what to try
+      next.
+    </p>
+    <p class="promise">
+      An open, agent-readable map of math problems, AI attempts, partial
+      progress, solution claims, verification evidence, method families, and
+      replay-ready opportunities.
+    </p>
+    <input
+      id="home-search"
+      class="search-large"
+      type="search"
+      placeholder="Search an AI proof, theorem, field, or status…"
+      aria-label="Search the frontier"
+    />
+    <div class="hero-actions">
+      <a class="button" id="home-search-action" href={`${base}frontier/`}
+        >Search the frontier</a
+      >
+      <a class="button secondary" href={`${base}replay-ready/`}
+        >Try with Low-Hanging Fruit</a
+      >
+      <a class="button secondary" href={`${base}api/v1/index.json`}>JSON Feed</a
+      >
+    </div>
+  </section>
+
+  <section class="shell" style="padding-top: 0">
+    <div class="metrics" aria-label="Snapshot metrics">
+      <div class="metric">
+        <strong>{normalizedData.problems.length}</strong><span
+          >tracked in snapshot</span
+        >
+      </div>
+      <div class="metric">
+        <strong>{counts.resolved}</strong><span>source-reported resolved</span>
+      </div>
+      <div class="metric">
+        <strong>{counts.candidate}</strong><span>candidate</span>
+      </div>
+      <div class="metric">
+        <strong>{counts.partial}</strong><span>partial</span>
+      </div>
+      <div class="metric">
+        <strong>{replayCandidates.length}</strong><span>replay-ready</span>
+      </div>
+    </div>
+    <p class="coverage">
+      Bundled seed snapshot from VibeMathed, generated <time
+        datetime={snapshot.generated}>{snapshot.generated.slice(0, 10)}</time
+      >. This is a launch seed, not a complete database of open math problems.
+      Run <code>pnpm sync</code> for the current full upstream dataset.
+    </p>
+  </section>
+
+  <section class="shell">
+    <div class="section-head">
+      <h2>Latest changes</h2><a href={`${base}latest/`}>See all events →</a>
+    </div>
+    <div class="grid">
+      {
+        problems.map((problem) => (
+          <ProblemCard
+            problem={problem}
+            verification={verificationByProblem.get(problem.id)}
+            replay={replayCandidates.some(
+              (item) => item.problem_id === problem.id,
+            )}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="shell">
+    <div class="section-head"><h2>From report to action</h2></div>
+    <div class="grid">
+      <div>
+        <p class="eyebrow">Claim-aware</p>
+        <h3>“Solved” is not one state.</h3>
+        <p>
+          VibeMath separates result type, aggregated status, source assertions,
+          mathematical verification, statement fidelity, and peer review.
+          Conflicting sources stay visible.
+        </p>
+        <a href={`${base}methodology/`}>Read the claim policy →</a>
+      </div>
+      <div>
+        <p class="eyebrow">Agent-native</p>
+        <h3>Orient first. Replay second.</h3>
+        <p>
+          Use the Agent Skill, six-tool read-only MCP server, or static JSON
+          API. Export a stable handoff into Low-Hanging Fruit without promoting
+          a candidate claim.
+        </p>
+        <a href="https://github.com/cyanseek/Low-Hanging-Fruit"
+          >Open Low-Hanging Fruit →</a
+        >
+      </div>
+    </div>
+    <pre
+      class="relation">VibeMath
+live frontier, status, evidence, search
+        │
+        ▼
+Low-Hanging Fruit
+ranking, campaigns, pilots, verification
+        │
+        └──── candidate evidence ────▶ VibeMath review queue</pre>
+  </section>
+
+  <script is:inline define:vars={{ base }}>
+    const input = document.querySelector("#home-search");
+    const action = document.querySelector("#home-search-action");
+    const update = () => {
+      const query = input instanceof HTMLInputElement ? input.value.trim() : "";
+      if (action instanceof HTMLAnchorElement)
+        action.href = `${base}frontier/?q=${encodeURIComponent(query)}`;
+    };
+    input?.addEventListener("input", update);
+    input?.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && action instanceof HTMLAnchorElement) {
+        update();
+        window.location.href = action.href;
+      }
+    });
+  </script>
+</BaseLayout>

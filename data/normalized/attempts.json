@@ -1,0 +1,164 @@
+[
+  {
+    "id": "vibemathed:composites-among-xi-7-n:attempt",
+    "problem_id": "vibemathed:composites-among-xi-7-n",
+    "model": "Fable 5, Opus 4.8",
+    "provider": "Anthropic",
+    "attempted_at": "2026-08-15T00:00:00.000Z",
+    "human_collaborators": [],
+    "exposure": "unknown",
+    "prompt_public": null,
+    "outcome": "The source reports an AI-produced computational route, certificate, Lean formalization, and draft under human direction.",
+    "failed_routes": [],
+    "artifacts": [
+      {
+        "label": "Lean development, data and generating programs",
+        "url": "https://github.com/rwst/On-Composites",
+        "kind": "lean-proof",
+        "license": null
+      }
+    ],
+    "sources": [
+      {
+        "label": "On the composites among [ξ7ⁿ]",
+        "url": "https://www.researchgate.net/publication/412294027_On_the_composites_among_x7",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+        "url": "https://vibemathed.com/problem/composites-among-xi-7-n",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ],
+    "cost_usd": null,
+    "independence": "unknown"
+  },
+  {
+    "id": "vibemathed:erdos-planar-unit-distance:attempt",
+    "problem_id": "vibemathed:erdos-planar-unit-distance",
+    "model": "OpenAI frontier model (specific version not disclosed)",
+    "provider": "OpenAI",
+    "attempted_at": "2026-05-27T00:00:00.000Z",
+    "human_collaborators": [
+      "Noga Alon",
+      "Thomas Bloom",
+      "Timothy Gowers",
+      "Daniel Litt",
+      "Will Sawin",
+      "Jacob Tsimerman",
+      "Melanie Matchett Wood"
+    ],
+    "exposure": "unknown",
+    "prompt_public": null,
+    "outcome": "Model-assisted construction of a point configuration reported to have more than $n^{1.014}$ unit-distance pairs.",
+    "failed_routes": [],
+    "artifacts": [],
+    "sources": [
+      {
+        "label": "Remarks on the disproof of the unit distance conjecture",
+        "url": "https://arxiv.org/abs/2605.20695",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: Erdős's Planar Unit Distance Conjecture",
+        "url": "https://vibemathed.com/problem/erdos-planar-unit-distance",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ],
+    "cost_usd": null,
+    "independence": "unknown"
+  },
+  {
+    "id": "vibemathed:quartic-hessian-conjecture-dimension-four:attempt",
+    "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+    "model": "GPT-5.6 Sol, GPT-5.6 Luna, Claude Fable 5, DeepSeek V4 Pro",
+    "provider": "OpenAI, Anthropic, DeepSeek",
+    "attempted_at": "2026-08-14T00:00:00.000Z",
+    "human_collaborators": [
+      "Zixiang Ni"
+    ],
+    "exposure": "unknown",
+    "prompt_public": null,
+    "outcome": "The source credits AI systems with exploring candidate arguments, adversarial review, algebraic checking, and editorial assistance.",
+    "failed_routes": [],
+    "artifacts": [],
+    "sources": [
+      {
+        "label": "The Quartic Hessian Conjecture in Dimension Four",
+        "url": "https://arxiv.org/abs/2608.14217",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: The Quartic Hessian Conjecture in Dimension Four",
+        "url": "https://vibemathed.com/problem/quartic-hessian-conjecture-dimension-four",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ],
+    "cost_usd": null,
+    "independence": "unknown"
+  },
+  {
+    "id": "vibemathed:erdos-267:attempt",
+    "problem_id": "vibemathed:erdos-267",
+    "model": "GPT-5.6 starships (Claude Fable 5 reviewer)",
+    "provider": "OpenAI / Anthropic",
+    "attempted_at": "2026-07-13T00:00:00.000Z",
+    "human_collaborators": [],
+    "exposure": "unknown",
+    "prompt_public": null,
+    "outcome": "Produced by the GPT-5.6 starships pipeline with Claude Fable 5 as reviewer, according to the source.",
+    "failed_routes": [],
+    "artifacts": [],
+    "sources": [
+      {
+        "label": "erdosproblems.com/267",
+        "url": "https://www.erdosproblems.com/267",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: Erdős Problem #267",
+        "url": "https://vibemathed.com/problem/erdos-267",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ],
+    "cost_usd": null,
+    "independence": "unknown"
+  },
+  {
+    "id": "vibemathed:erdos-7:attempt",
+    "problem_id": "vibemathed:erdos-7",
+    "model": null,
+    "provider": null,
+    "attempted_at": null,
+    "human_collaborators": [],
+    "exposure": "unknown",
+    "prompt_public": null,
+    "outcome": null,
+    "failed_routes": [],
+    "artifacts": [],
+    "sources": [
+      {
+        "label": "erdosproblems.com/7",
+        "url": "https://www.erdosproblems.com/7",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: Erdős Problem #7",
+        "url": "https://vibemathed.com/problem/erdos-7",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ],
+    "cost_usd": null,
+    "independence": "unknown"
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "source": "vibemath",
+  "problem_id": "vibemathed:erdos-planar-unit-distance",
+  "title": "Erdős's Planar Unit Distance Conjecture",
+  "canonical_statement": "Erdős conjectured an $n^{1+o(1)}$ upper bound on the number of unit-distance pairs among $n$ points in the plane. A construction with more than $n^{1.014}$ pairs disproves that conjectured asymptotic upper bound; the exact extremal unit-distance problem remains open.",
+  "plain_summary": "VibeMathed reports this item as resolved. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+  "current_status": "resolved",
+  "solution_events": [
+    {
+      "id": "vibemathed:erdos-planar-unit-distance:event",
+      "problem_id": "vibemathed:erdos-planar-unit-distance",
+      "type": "disproved",
+      "status": "resolved",
+      "occurred_at": "2026-05-27T00:00:00.000Z",
+      "title": "Remarks on the disproof of the unit distance conjecture",
+      "summary": "The asymptotic conjecture was disproved; this does not determine the exact unit-distance extremal function.",
+      "ai_contribution": "ai_co_developed",
+      "attempt_ids": [
+        "vibemathed:erdos-planar-unit-distance:attempt"
+      ],
+      "method_family_ids": [
+        "vibemathed:erdos-planar-unit-distance:method"
+      ],
+      "source_assertion_ids": [
+        "vibemathed:erdos-planar-unit-distance:assertion"
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "id": "vibemathed:erdos-planar-unit-distance:attempt",
+      "problem_id": "vibemathed:erdos-planar-unit-distance",
+      "model": "OpenAI frontier model (specific version not disclosed)",
+      "provider": "OpenAI",
+      "attempted_at": "2026-05-27T00:00:00.000Z",
+      "human_collaborators": [
+        "Noga Alon",
+        "Thomas Bloom",
+        "Timothy Gowers",
+        "Daniel Litt",
+        "Will Sawin",
+        "Jacob Tsimerman",
+        "Melanie Matchett Wood"
+      ],
+      "exposure": "unknown",
+      "prompt_public": null,
+      "outcome": "Model-assisted construction of a point configuration reported to have more than $n^{1.014}$ unit-distance pairs.",
+      "failed_routes": [],
+      "artifacts": [],
+      "sources": [
+        {
+          "label": "Remarks on the disproof of the unit distance conjecture",
+          "url": "https://arxiv.org/abs/2605.20695",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: Erdős's Planar Unit Distance Conjecture",
+          "url": "https://vibemathed.com/problem/erdos-planar-unit-distance",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "cost_usd": null,
+      "independence": "unknown"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "vibemathed:erdos-planar-unit-distance:verification",
+      "problem_id": "vibemathed:erdos-planar-unit-distance",
+      "solution_event_id": "vibemathed:erdos-planar-unit-distance:event",
+      "level": "independent_expert_verified",
+      "mathematical_correctness": "supported",
+      "statement_fidelity": "unaudited",
+      "peer_review": "none",
+      "verifier": "VibeMathed (source-reported label)",
+      "verified_at": null,
+      "note": "VibeMathed reports human expert verification and an arXiv write-up; VibeMath preserves that label as a source assertion.",
+      "sources": [
+        {
+          "label": "VibeMathed: Erdős's Planar Unit Distance Conjecture",
+          "url": "https://vibemathed.com/problem/erdos-planar-unit-distance",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        },
+        {
+          "label": "Remarks on the disproof of the unit distance conjecture",
+          "url": "https://arxiv.org/abs/2605.20695",
+          "kind": "primary-mathematical-source",
+          "license": null
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Remarks on the disproof of the unit distance conjecture",
+      "url": "https://arxiv.org/abs/2605.20695",
+      "kind": "primary-mathematical-source",
+      "license": null
+    },
+    {
+      "label": "VibeMathed: Erdős's Planar Unit Distance Conjecture",
+      "url": "https://vibemathed.com/problem/erdos-planar-unit-distance",
+      "kind": "source-assertion",
+      "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+    }
+  ],
+  "recommended_mode": "replay",
+  "recommended_exposure": "method_aware",
+  "opportunity_signals": [
+    {
+      "id": "vibemathed:erdos-planar-unit-distance:signal:replay_ready",
+      "problem_id": "vibemathed:erdos-planar-unit-distance",
+      "kind": "replay_ready",
+      "reason": "A public source and a non-unreviewed verification label support replay triage.",
+      "generated_at": "2026-08-17T15:54:39.560Z"
+    }
+  ],
+  "uncertainties": [
+    "VibeMath has not independently verified the mathematical claim.",
+    "AI-attempt independence and training-data exposure are unknown unless explicitly documented."
+  ],
+  "generated_at": "2026-08-17T15:54:39.560Z"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "VibeMath"
+  short_description: "Explore and verify the live frontier of AI mathematics"
+  default_prompt: "Use $vibemath to show what changed in AI mathematics, how strong the evidence is, and what is replay-ready."
+policy:
+  allow_implicit_invocation: true

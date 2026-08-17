@@ -1,0 +1,142 @@
+[
+  {
+    "id": "vibemathed:composites-among-xi-7-n:method",
+    "problem_id": "vibemathed:composites-among-xi-7-n",
+    "name": "computation (source-reported)",
+    "core_representation": null,
+    "core_reduction": null,
+    "key_lemmas": [],
+    "main_tools": [
+      "computation"
+    ],
+    "relationships": [],
+    "difference_confidence": 0,
+    "independent": "unknown",
+    "evidence": [
+      {
+        "label": "On the composites among [ξ7ⁿ]",
+        "url": "https://www.researchgate.net/publication/412294027_On_the_composites_among_x7",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+        "url": "https://vibemathed.com/problem/composites-among-xi-7-n",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ]
+  },
+  {
+    "id": "vibemathed:erdos-planar-unit-distance:method",
+    "problem_id": "vibemathed:erdos-planar-unit-distance",
+    "name": "construction (source-reported)",
+    "core_representation": null,
+    "core_reduction": null,
+    "key_lemmas": [],
+    "main_tools": [
+      "construction"
+    ],
+    "relationships": [],
+    "difference_confidence": 0,
+    "independent": "unknown",
+    "evidence": [
+      {
+        "label": "Remarks on the disproof of the unit distance conjecture",
+        "url": "https://arxiv.org/abs/2605.20695",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: Erdős's Planar Unit Distance Conjecture",
+        "url": "https://vibemathed.com/problem/erdos-planar-unit-distance",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ]
+  },
+  {
+    "id": "vibemathed:quartic-hessian-conjecture-dimension-four:method",
+    "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+    "name": "argument (source-reported)",
+    "core_representation": null,
+    "core_reduction": null,
+    "key_lemmas": [],
+    "main_tools": [
+      "argument"
+    ],
+    "relationships": [],
+    "difference_confidence": 0,
+    "independent": "unknown",
+    "evidence": [
+      {
+        "label": "The Quartic Hessian Conjecture in Dimension Four",
+        "url": "https://arxiv.org/abs/2608.14217",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: The Quartic Hessian Conjecture in Dimension Four",
+        "url": "https://vibemathed.com/problem/quartic-hessian-conjecture-dimension-four",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ]
+  },
+  {
+    "id": "vibemathed:erdos-267:method",
+    "problem_id": "vibemathed:erdos-267",
+    "name": "argument (source-reported)",
+    "core_representation": null,
+    "core_reduction": null,
+    "key_lemmas": [],
+    "main_tools": [
+      "argument"
+    ],
+    "relationships": [],
+    "difference_confidence": 0,
+    "independent": "unknown",
+    "evidence": [
+      {
+        "label": "erdosproblems.com/267",
+        "url": "https://www.erdosproblems.com/267",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: Erdős Problem #267",
+        "url": "https://vibemathed.com/problem/erdos-267",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ]
+  },
+  {
+    "id": "vibemathed:erdos-7:method",
+    "problem_id": "vibemathed:erdos-7",
+    "name": "argument (source-reported)",
+    "core_representation": null,
+    "core_reduction": null,
+    "key_lemmas": [],
+    "main_tools": [
+      "argument"
+    ],
+    "relationships": [],
+    "difference_confidence": 0,
+    "independent": "unknown",
+    "evidence": [
+      {
+        "label": "erdosproblems.com/7",
+        "url": "https://www.erdosproblems.com/7",
+        "kind": "primary-mathematical-source",
+        "license": null
+      },
+      {
+        "label": "VibeMathed: Erdős Problem #7",
+        "url": "https://vibemathed.com/problem/erdos-7",
+        "kind": "source-assertion",
+        "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+      }
+    ]
+  }
+]

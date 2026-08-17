@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "problem_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "core_representation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "core_reduction": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "key_lemmas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "main_tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "difference_confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "independent": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "unknown"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "kind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "license": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "label",
+          "url",
+          "kind",
+          "license"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "id",
+    "problem_id",
+    "name",
+    "core_representation",
+    "core_reduction",
+    "key_lemmas",
+    "main_tools",
+    "relationships",
+    "difference_confidence",
+    "independent",
+    "evidence"
+  ],
+  "additionalProperties": false
+}

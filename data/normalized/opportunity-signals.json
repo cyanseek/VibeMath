@@ -1,0 +1,37 @@
+[
+  {
+    "id": "vibemathed:composites-among-xi-7-n:signal:replay_ready",
+    "problem_id": "vibemathed:composites-among-xi-7-n",
+    "kind": "replay_ready",
+    "reason": "A public source and a non-unreviewed verification label support replay triage.",
+    "generated_at": "2026-08-17T15:54:39.560Z"
+  },
+  {
+    "id": "vibemathed:erdos-planar-unit-distance:signal:replay_ready",
+    "problem_id": "vibemathed:erdos-planar-unit-distance",
+    "kind": "replay_ready",
+    "reason": "A public source and a non-unreviewed verification label support replay triage.",
+    "generated_at": "2026-08-17T15:54:39.560Z"
+  },
+  {
+    "id": "vibemathed:quartic-hessian-conjecture-dimension-four:signal:recent_partial_result",
+    "problem_id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+    "kind": "recent_partial_result",
+    "reason": "A source-reported partial result may support bounded expansion.",
+    "generated_at": "2026-08-17T15:54:39.560Z"
+  },
+  {
+    "id": "vibemathed:erdos-267:signal:verify_now",
+    "problem_id": "vibemathed:erdos-267",
+    "kind": "verify_now",
+    "reason": "The source labels this result as a candidate; verification should precede reuse.",
+    "generated_at": "2026-08-17T15:54:39.560Z"
+  },
+  {
+    "id": "vibemathed:erdos-7:signal:watch_only",
+    "problem_id": "vibemathed:erdos-7",
+    "kind": "watch_only",
+    "reason": "Current public evidence does not meet the default replay threshold.",
+    "generated_at": "2026-08-17T15:54:39.560Z"
+  }
+]

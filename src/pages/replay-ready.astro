@@ -1,0 +1,46 @@
+---
+import ProblemCard from "../components/ProblemCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { normalizedData, replayCandidates } from "../lib/data";
+const problems = replayCandidates
+  .map((candidate) =>
+    normalizedData.problems.find(
+      (problem) => problem.id === candidate.problem_id,
+    ),
+  )
+  .filter((problem) => problem !== undefined);
+---
+
+<BaseLayout title="Replay-ready — VibeMath">
+  <section class="shell">
+    <p class="eyebrow">Transparent triage</p>
+    <h1>Replay-ready,<br />not guaranteed.</h1>
+    <p class="coverage">
+      A replay-ready signal requires a public primary source, a
+      non-candidate/non-contested/non-retracted status, and verification at or
+      above <code>source_audited</code>. It is not a mathematical success
+      probability.
+    </p>
+    <div class="grid">
+      {
+        problems.map((problem) => {
+          const candidate = replayCandidates.find(
+            (item) => item.problem_id === problem.id,
+          )!;
+          return (
+            <ProblemCard
+              problem={problem}
+              verification={candidate.verification_level}
+              replay
+            />
+          );
+        })
+      }
+    </div>
+    {
+      problems.length === 0 && (
+        <p class="empty">No item meets the configured replay threshold.</p>
+      )
+    }
+  </section>
+</BaseLayout>

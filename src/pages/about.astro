@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="About VibeMath">
+  <article class="shell narrow">
+    <p class="eyebrow">About</p>
+    <h1>A live map,<br />built for agents.</h1>
+    <p>
+      VibeMath maps open problems, AI attempts, partial progress, solution
+      claims, verification, method families, and next actions. It serves people
+      through a static website and agents through JSON, an Agent Skill, and a
+      read-only MCP server.
+    </p>
+    <p>
+      <strong
+        >VibeMath is an independent open-source project. It is not affiliated
+        with VibeMathed or BlinkDL/VibeMath.</strong
+      >
+    </p>
+    <p>
+      <strong
+        >VibeMath 是独立开源项目，与 VibeMathed 及 BlinkDL/VibeMath
+        无隶属或官方合作关系。</strong
+      >
+    </p>
+
+    <h2>Different scopes, respectful federation</h2>
+    <blockquote>
+      <p>
+        VibeMathed records math problems solved with AI.<br />VibeMath maps the
+        whole live frontier: open problems, AI attempts, partial progress,
+        solution claims, verification, method families, and what to try next.
+      </p>
+    </blockquote>
+    <p>
+      VibeMath does not copy another project's brand or claim to replace any
+      database. VibeMathed is the first real adapter and is credited under CC BY
+      4.0.
+    </p>
+
+    <h2>Use the data</h2>
+    <ul>
+      <li><a href={`${base}api/v1/index.json`}>Static JSON API index</a></li>
+      <li>
+        <a href="https://github.com/cyanseek/VibeMath/tree/main/skills/vibemath"
+          >Agent Skill</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/cyanseek/VibeMath/tree/main/mcp"
+          >MCP server</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/cyanseek/low-hanging-fruit"
+          >Low-Hanging Fruit action engine</a
+        >
+      </li>
+    </ul>
+  </article>
+</BaseLayout>

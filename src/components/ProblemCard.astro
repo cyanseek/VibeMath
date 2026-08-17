@@ -1,0 +1,37 @@
+---
+import type { Problem } from "../lib/schema";
+import StatusPill from "./StatusPill.astro";
+
+interface Props {
+  problem: Problem;
+  verification?: string;
+  replay?: boolean;
+}
+const { problem, verification, replay = false } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<article
+  class="problem-card searchable"
+  data-search={`${problem.title.original} ${problem.fields.join(" ")} ${problem.current_status}`.toLowerCase()}
+  data-status={problem.current_status}
+  data-field={problem.fields[0]}
+>
+  <div class="card-meta">
+    <StatusPill status={problem.current_status} />
+    {
+      verification && (
+        <span class="verification">{verification.replaceAll("_", " ")}</span>
+      )
+    }
+    {replay && <span class="signal">replay-ready</span>}
+  </div>
+  <h3>
+    <a href={`${base}problems/${problem.slug}/`}>{problem.title.original}</a>
+  </h3>
+  <p>{problem.plain_summary}</p>
+  <footer>
+    <span>{problem.fields[0]}</span>
+    <time datetime={problem.updated_at}>{problem.updated_at.slice(0, 10)}</time>
+  </footer>
+</article>

@@ -1,0 +1,229 @@
+---
+import StatusPill from "../../components/StatusPill.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { normalizedData, problemBundle } from "../../lib/data";
+import { buildHandoff, handoffPrompt } from "../../lib/lhf-handoff";
+import { replayCandidates } from "../../lib/data";
+
+export function getStaticPaths() {
+  return normalizedData.problems.map((problem) => ({
+    params: { id: problem.slug },
+  }));
+}
+
+const bundle = problemBundle(Astro.params.id!);
+if (!bundle) throw new Error(`Unknown problem ${Astro.params.id}`);
+const {
+  problem,
+  attempts,
+  events,
+  verifications,
+  methods,
+  assertions,
+  signals,
+  replay,
+} = bundle;
+const handoff = buildHandoff(problem.id, normalizedData, replayCandidates);
+const promptEn = handoffPrompt(handoff, "en");
+const promptZh = handoffPrompt(handoff, "zh");
+const base = import.meta.env.BASE_URL;
+const handoffUrl = `${base}api/v1/handoffs/${problem.slug}.json`;
+---
+
+<BaseLayout
+  title={`${problem.title.original} — VibeMath`}
+  description={problem.plain_summary}
+>
+  <section class="shell">
+    <p class="eyebrow">Problem detail · source-aware</p>
+    <h1 style="font-size: clamp(2.6rem, 7vw, 5.6rem)">
+      {problem.title.original}
+    </h1>
+    <div class="card-meta">
+      <StatusPill status={problem.current_status} /><span class="verification"
+        >confidence {Math.round(problem.current_status_confidence * 100)}%</span
+      >
+    </div>
+    <p class="coverage">{problem.plain_summary}</p>
+  </section>
+
+  <section class="shell detail-grid">
+    <div>
+      <h2>Precise statement</h2>
+      <p>{problem.canonical_statement}</p>
+      <p class="notice">
+        This statement is indexed from an attributed source. VibeMath has not
+        independently audited statement fidelity, correctness, priority, or
+        novelty.
+      </p>
+
+      <h2>What AI did</h2>
+      {
+        attempts.map((attempt) => (
+          <article>
+            <h3>{attempt.model ?? "Model not specified"}</h3>
+            <p>
+              {attempt.outcome ??
+                "The source does not provide a sufficiently specific role description."}
+            </p>
+            <p>
+              <small>
+                Provider: {attempt.provider ?? "unknown"} · Prompt public:{" "}
+                {attempt.prompt_public === null
+                  ? "unknown"
+                  : String(attempt.prompt_public)}{" "}
+                · Independence: {attempt.independence}
+              </small>
+            </p>
+          </article>
+        ))
+      }
+
+      <h2>Verification boundary</h2>
+      {
+        verifications.map((verification) => (
+          <article>
+            <div class="card-meta">
+              <span class="verification">
+                {verification.level.replaceAll("_", " ")}
+              </span>
+            </div>
+            <p>{verification.note ?? "No verification note supplied."}</p>
+            <p>
+              <small>
+                Correctness: {verification.mathematical_correctness} · statement
+                fidelity: {verification.statement_fidelity} · peer review:{" "}
+                {verification.peer_review}
+              </small>
+            </p>
+          </article>
+        ))
+      }
+
+      <h2>Timeline</h2>
+      <ol class="timeline">
+        {
+          events.map((event) => (
+            <li>
+              <time datetime={event.occurred_at ?? undefined}>
+                {event.occurred_at?.slice(0, 10) ?? "date unknown"}
+              </time>
+              <h3>{event.title}</h3>
+              <p>{event.summary}</p>
+            </li>
+          ))
+        }
+      </ol>
+
+      <h2>Known method families</h2>
+      {
+        methods.map((method) => (
+          <article>
+            <h3>{method.name}</h3>
+            <p>
+              {method.main_tools.length
+                ? `Source-reported tools: ${method.main_tools.join(", ")}.`
+                : "The method has not yet been classified."}
+            </p>
+            <p>
+              <small>
+                Independent: {method.independent} · difference confidence:{" "}
+                {method.difference_confidence}
+              </small>
+            </p>
+          </article>
+        ))
+      }
+
+      <h2>What remains uncertain</h2>
+      <p>{problem.what_remains_uncertain}</p>
+      <ul>
+        {handoff.uncertainties.map((uncertainty) => <li>{uncertainty}</li>)}
+      </ul>
+    </div>
+
+    <aside>
+      <div class="aside-card">
+        <p class="eyebrow">Current status</p>
+        <StatusPill status={problem.current_status} />
+        <h3>{replay ? "Replay candidate" : "Verification or watch"}</h3>
+        <p>
+          {
+            replay?.reason ??
+              "This entry does not meet the default replay-ready rule."
+          }
+        </p>
+        <ul>
+          {
+            signals.map((signal) => (
+              <li>
+                <strong>{signal.kind}</strong>: {signal.reason}
+              </li>
+            ))
+          }
+        </ul>
+        <div class="actions">
+          <a class="button" href={handoffUrl} download>Download handoff JSON</a>
+          <button class="button secondary copy" data-copy={promptEn}
+            >Copy English prompt</button
+          >
+          <button class="button secondary copy" data-copy={promptZh}
+            >复制中文 Prompt</button
+          >
+          <a
+            class="button secondary"
+            href="https://github.com/cyanseek/low-hanging-fruit"
+            >Try with Low-Hanging Fruit</a
+          >
+        </div>
+        <p id="copy-status" role="status" aria-live="polite"></p>
+        <h3>Sources</h3>
+        <ul class="source-list">
+          {
+            problem.canonical_sources.map((source) => (
+              <li>
+                <>
+                  <a href={source.url} rel="external nofollow">
+                    {source.label}
+                  </a>
+                  <br />
+                  <small>
+                    {source.kind}
+                    {source.license ? ` · ${source.license}` : ""}
+                  </small>
+                </>
+              </li>
+            ))
+          }
+          <li>
+            <a href="https://vibemathed.com/methodology" rel="external"
+              >VibeMathed methodology</a
+            >
+          </li>
+        </ul>
+        <p>
+          <small
+            >{assertions.length} preserved source assertion(s). Raw fields remain
+            available in the normalized data ledger.</small
+          >
+        </p>
+      </div>
+    </aside>
+  </section>
+  <script>
+    const status = document.querySelector("#copy-status");
+    for (const button of document.querySelectorAll(".copy")) {
+      button.addEventListener("click", async () => {
+        if (!(button instanceof HTMLElement)) return;
+        try {
+          await navigator.clipboard.writeText(button.dataset.copy ?? "");
+          if (status) status.textContent = "Copied.";
+        } catch {
+          if (status)
+            status.textContent =
+              "Clipboard unavailable; download the JSON handoff instead.";
+        }
+      });
+    }
+  </script>
+</BaseLayout>

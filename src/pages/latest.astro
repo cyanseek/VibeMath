@@ -1,0 +1,54 @@
+---
+import StatusPill from "../components/StatusPill.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { normalizedData, snapshot } from "../lib/data";
+const base = import.meta.env.BASE_URL;
+const events = [...normalizedData.solutionEvents].sort((a, b) =>
+  (b.occurred_at ?? "").localeCompare(a.occurred_at ?? ""),
+);
+---
+
+<BaseLayout title="Latest AI mathematics events — VibeMath">
+  <section class="shell narrow">
+    <p class="eyebrow">Latest</p>
+    <h1>What changed?</h1>
+    <p class="coverage">
+      Status changes from the bundled source snapshot generated {
+        snapshot.generated.slice(0, 10)
+      }. Dates describe source-reported events, not VibeMath endorsement.
+    </p>
+    <ol class="timeline">
+      {
+        events.map((event) => {
+          const problem = normalizedData.problems.find(
+            (item) => item.id === event.problem_id,
+          )!;
+          const verification = normalizedData.verifications.find(
+            (item) => item.solution_event_id === event.id,
+          );
+          return (
+            <li>
+              <time datetime={event.occurred_at ?? undefined}>
+                {event.occurred_at?.slice(0, 10) ?? "date unknown"}
+              </time>
+              <h3>
+                <a href={`${base}problems/${problem.slug}/`}>
+                  {problem.title.original}
+                </a>
+              </h3>
+              <div class="card-meta">
+                <>
+                  <StatusPill status={event.status} />
+                  <span class="verification">
+                    {verification?.level.replaceAll("_", " ")}
+                  </span>
+                </>
+              </div>
+              <p>{event.summary}</p>
+            </li>
+          );
+        })
+      }
+    </ol>
+  </section>
+</BaseLayout>

@@ -1,0 +1,63 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+}
+const {
+  title = "VibeMath — The Live Frontier of AI Mathematics",
+  description = "Know what AI has solved in mathematics, what remains open, and what to try next.",
+  lang = "en",
+} = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#171611" />
+    <link
+      rel="icon"
+      href={`data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2284%22>∴</text></svg>`}
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href={base}>VibeMath<span>∴</span></a>
+      <nav aria-label="Primary navigation">
+        <a href={`${base}latest/`}>Latest</a>
+        <a href={`${base}frontier/`}>Frontier</a>
+        <a href={`${base}replay-ready/`}>Replay-ready</a>
+        <a href={`${base}conflicts/`}>Conflicts</a>
+        <a href={`${base}methodology/`}>Methodology</a>
+        <a href={`${base}about/`}>About</a>
+      </nav>
+      <a class="language" href={`${base}zh-CN/`} aria-label="简体中文">中文</a>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <div>
+        <strong>VibeMath</strong>
+        <p>The Live Frontier of AI Mathematics.</p>
+      </div>
+      <div>
+        <p>
+          Source data includes <a href="https://vibemathed.com" rel="external"
+            >VibeMathed</a
+          >, CC BY 4.0. Cite original mathematical sources separately.
+        </p>
+        <p>
+          VibeMath is an independent open-source project. It is not affiliated
+          with VibeMathed or BlinkDL/VibeMath.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-17T15:54:39.560Z",
+  "sources": [
+    {
+      "id": "vibemathed",
+      "url": "https://vibemathed.com/api/dataset",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "coverage": "Federated schema with 5 records in the bundled VibeMathed snapshot; not a complete map of mathematics.",
+  "data": [
+    {
+      "id": "vibemathed:composites-among-xi-7-n",
+      "slug": "composites-among-xi-7-n",
+      "title": {
+        "original": "Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+        "en": "Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+        "zh_cn": null
+      },
+      "canonical_statement": "For every real $\\xi>0$ the sequence of integer parts $[\\xi 7^{n}]$, $n=0,1,2,\\dots$, contains infinitely many composite numbers. Second, there is no infinite right truncatable prime in base 7.",
+      "plain_summary": "VibeMathed reports this item as resolved. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "why_it_matters": null,
+      "what_ai_did": "The source reports an AI-produced computational route, certificate, Lean formalization, and draft under human direction.",
+      "what_is_verified": "VibeMathed reports a source audit with a documented native_decide boundary; VibeMath did not compile or independently audit it.",
+      "what_remains_uncertain": "VibeMath has not independently audited the mathematical statement, proof, or novelty claim.",
+      "how_a_non_expert_can_check": "Follow the primary source and the VibeMathed entry; compare the exact statement, assumptions, and verification label.",
+      "expert_boundary": "The source statement is reproduced for indexing with attribution. Mathematical correctness requires domain-expert or mechanical review.",
+      "fields": [
+        "Number theory - integer sequences",
+        "Number theory"
+      ],
+      "posed_by": [
+        "Forman and Shapiro (1967)",
+        "Dubickas and Novikas (2005)"
+      ],
+      "year_posed": 2005,
+      "canonical_sources": [
+        {
+          "label": "On the composites among [ξ7ⁿ]",
+          "url": "https://www.researchgate.net/publication/412294027_On_the_composites_among_x7",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: Composites Among $[\\xi 7^n]$ and Right-Truncatable Primes in Base 7",
+          "url": "https://vibemathed.com/problem/composites-among-xi-7-n",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "key_definitions": [],
+      "confusing_variants": [],
+      "current_status": "resolved",
+      "current_status_confidence": 0.7,
+      "source_assertion_ids": [
+        "vibemathed:composites-among-xi-7-n:assertion"
+      ],
+      "related_problem_ids": [],
+      "updated_at": "2026-08-17T15:54:39.560Z"
+    },
+    {
+      "id": "vibemathed:erdos-planar-unit-distance",
+      "slug": "erdos-planar-unit-distance",
+      "title": {
+        "original": "Erdős's Planar Unit Distance Conjecture",
+        "en": "Erdős's Planar Unit Distance Conjecture",
+        "zh_cn": null
+      },
+      "canonical_statement": "Erdős conjectured an $n^{1+o(1)}$ upper bound on the number of unit-distance pairs among $n$ points in the plane. A construction with more than $n^{1.014}$ pairs disproves that conjectured asymptotic upper bound; the exact extremal unit-distance problem remains open.",
+      "plain_summary": "VibeMathed reports this item as resolved. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "why_it_matters": null,
+      "what_ai_did": "Model-assisted construction of a point configuration reported to have more than $n^{1.014}$ unit-distance pairs.",
+      "what_is_verified": "VibeMathed reports human expert verification and an arXiv write-up; VibeMath preserves that label as a source assertion.",
+      "what_remains_uncertain": "VibeMath has not independently audited the mathematical statement, proof, or novelty claim.",
+      "how_a_non_expert_can_check": "Follow the primary source and the VibeMathed entry; compare the exact statement, assumptions, and verification label.",
+      "expert_boundary": "The source statement is reproduced for indexing with attribution. Mathematical correctness requires domain-expert or mechanical review.",
+      "fields": [
+        "Combinatorial Geometry",
+        "Geometry & topology"
+      ],
+      "posed_by": [
+        "Paul Erdős"
+      ],
+      "year_posed": 1946,
+      "canonical_sources": [
+        {
+          "label": "Remarks on the disproof of the unit distance conjecture",
+          "url": "https://arxiv.org/abs/2605.20695",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: Erdős's Planar Unit Distance Conjecture",
+          "url": "https://vibemathed.com/problem/erdos-planar-unit-distance",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "key_definitions": [],
+      "confusing_variants": [
+        "The asymptotic conjecture was disproved; this does not determine the exact unit-distance extremal function."
+      ],
+      "current_status": "resolved",
+      "current_status_confidence": 0.7,
+      "source_assertion_ids": [
+        "vibemathed:erdos-planar-unit-distance:assertion"
+      ],
+      "related_problem_ids": [],
+      "updated_at": "2026-08-17T15:54:39.560Z"
+    },
+    {
+      "id": "vibemathed:quartic-hessian-conjecture-dimension-four",
+      "slug": "quartic-hessian-conjecture-dimension-four",
+      "title": {
+        "original": "The Quartic Hessian Conjecture in Dimension Four",
+        "en": "The Quartic Hessian Conjecture in Dimension Four",
+        "zh_cn": null
+      },
+      "canonical_statement": "The Hessian conjecture is open exactly in dimension four. The source reports a proof for every quartic polynomial in dimension four, a proper slice of the full open problem.",
+      "plain_summary": "VibeMathed reports this item as partial. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "why_it_matters": null,
+      "what_ai_did": "The source credits AI systems with exploring candidate arguments, adversarial review, algebraic checking, and editorial assistance.",
+      "what_is_verified": "VibeMathed reports a days-old sole-author preprint and no independent review.",
+      "what_remains_uncertain": "VibeMath has not independently audited the mathematical statement, proof, or novelty claim.",
+      "how_a_non_expert_can_check": "Follow the primary source and the VibeMathed entry; compare the exact statement, assumptions, and verification label.",
+      "expert_boundary": "The source statement is reproduced for indexing with attribution. Mathematical correctness requires domain-expert or mechanical review.",
+      "fields": [
+        "Polynomial automorphisms",
+        "Algebra"
+      ],
+      "posed_by": [
+        "The Hessian conjecture (de Bondt",
+        "van den Essen line)"
+      ],
+      "year_posed": null,
+      "canonical_sources": [
+        {
+          "label": "The Quartic Hessian Conjecture in Dimension Four",
+          "url": "https://arxiv.org/abs/2608.14217",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: The Quartic Hessian Conjecture in Dimension Four",
+          "url": "https://vibemathed.com/problem/quartic-hessian-conjecture-dimension-four",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "key_definitions": [],
+      "confusing_variants": [],
+      "current_status": "partial",
+      "current_status_confidence": 0.7,
+      "source_assertion_ids": [
+        "vibemathed:quartic-hessian-conjecture-dimension-four:assertion"
+      ],
+      "related_problem_ids": [],
+      "updated_at": "2026-08-17T15:54:39.560Z"
+    },
+    {
+      "id": "vibemathed:erdos-267",
+      "slug": "erdos-267",
+      "title": {
+        "original": "Erdős Problem #267",
+        "en": "Erdős Problem #267",
+        "zh_cn": null
+      },
+      "canonical_statement": "If $n_1<n_2<\\cdots$ with $n_{k+1}/n_k\\ge c>1$, must $\\sum_k 1/F_{n_k}$ be irrational? The proposed proof closes the range $1<c<2$ left open by earlier criteria.",
+      "plain_summary": "VibeMathed reports this item as candidate. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "why_it_matters": null,
+      "what_ai_did": "Produced by the GPT-5.6 starships pipeline with Claude Fable 5 as reviewer, according to the source.",
+      "what_is_verified": "The source reports a Lean check while the Erdős Problems community status remains pending; status therefore remains candidate.",
+      "what_remains_uncertain": "VibeMath has not independently audited the mathematical statement, proof, or novelty claim.",
+      "how_a_non_expert_can_check": "Follow the primary source and the VibeMathed entry; compare the exact statement, assumptions, and verification label.",
+      "expert_boundary": "The source statement is reproduced for indexing with attribution. Mathematical correctness requires domain-expert or mechanical review.",
+      "fields": [
+        "Number Theory, Irrationality",
+        "Number theory"
+      ],
+      "posed_by": [
+        "Paul Erdős"
+      ],
+      "year_posed": null,
+      "canonical_sources": [
+        {
+          "label": "erdosproblems.com/267",
+          "url": "https://www.erdosproblems.com/267",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: Erdős Problem #267",
+          "url": "https://vibemathed.com/problem/erdos-267",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "key_definitions": [],
+      "confusing_variants": [],
+      "current_status": "candidate",
+      "current_status_confidence": 0.5,
+      "source_assertion_ids": [
+        "vibemathed:erdos-267:assertion"
+      ],
+      "related_problem_ids": [],
+      "updated_at": "2026-08-17T15:54:39.560Z"
+    },
+    {
+      "id": "vibemathed:erdos-7",
+      "slug": "erdos-7",
+      "title": {
+        "original": "Erdős Problem #7",
+        "en": "Erdős Problem #7",
+        "zh_cn": null
+      },
+      "canonical_statement": "Can there be a finite covering system of the integers with distinct moduli, all odd and greater than one?",
+      "plain_summary": "VibeMathed reports this item as retracted. VibeMath preserves that report as a source assertion and has not independently authored a plain-language mathematical explanation.",
+      "why_it_matters": null,
+      "what_ai_did": null,
+      "what_is_verified": "VibeMathed records the claim as retracted after audit.",
+      "what_remains_uncertain": "The claimed Lean proof was withdrawn after an audit found an invalid central axiom and a statement-fidelity gap.",
+      "how_a_non_expert_can_check": "Follow the primary source and the VibeMathed entry; compare the exact statement, assumptions, and verification label.",
+      "expert_boundary": "The source statement is reproduced for indexing with attribution. Mathematical correctness requires domain-expert or mechanical review.",
+      "fields": [
+        "Number Theory, Covering Systems",
+        "Number theory"
+      ],
+      "posed_by": [
+        "Paul Erdős"
+      ],
+      "year_posed": null,
+      "canonical_sources": [
+        {
+          "label": "erdosproblems.com/7",
+          "url": "https://www.erdosproblems.com/7",
+          "kind": "primary-mathematical-source",
+          "license": null
+        },
+        {
+          "label": "VibeMathed: Erdős Problem #7",
+          "url": "https://vibemathed.com/problem/erdos-7",
+          "kind": "source-assertion",
+          "license": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)"
+        }
+      ],
+      "key_definitions": [],
+      "confusing_variants": [],
+      "current_status": "retracted",
+      "current_status_confidence": 0.7,
+      "source_assertion_ids": [
+        "vibemathed:erdos-7:assertion"
+      ],
+      "related_problem_ids": [],
+      "updated_at": "2026-08-17T15:54:39.560Z"
+    }
+  ],
+  "build_id": "sha256:5bd967102ed35c4ddcccfc0eab9711f51559bb76e6689adbbdb368da43b7e9aa"
+}

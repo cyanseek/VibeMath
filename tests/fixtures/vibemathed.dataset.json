@@ -1,0 +1,73 @@
+{
+  "title": "VibeMathed fixture",
+  "url": "https://vibemathed.com",
+  "license": "CC BY 4.0",
+  "methodology": "https://vibemathed.com/methodology",
+  "generated": "2026-08-17T15:54:39.560Z",
+  "count": 4,
+  "unknownTopLevel": "preserve me",
+  "problems": [
+    {
+      "slug": "resolved-item",
+      "name": "Resolved fixture",
+      "field": "Combinatorics",
+      "statement": "A fixed resolved test statement.",
+      "resolution": "resolved",
+      "solveType": "proved",
+      "aiContribution": "ai-discovered",
+      "verification": "source-audited",
+      "resolutionMethod": "argument",
+      "sourceUrl": "https://example.org/resolved",
+      "sourceName": "Resolved source",
+      "links": [],
+      "relations": [],
+      "humanCollaborators": [],
+      "unknownProblemField": { "kept": true }
+    },
+    {
+      "slug": "partial-item",
+      "name": "Partial fixture",
+      "field": "Algebra",
+      "statement": "A fixed partial test statement.",
+      "resolution": "partial",
+      "solveType": "partial_result",
+      "aiContribution": "ai-assisted",
+      "verification": "unreviewed",
+      "sourceUrl": "https://example.org/partial",
+      "sourceName": "Partial source",
+      "links": [],
+      "relations": [],
+      "humanCollaborators": []
+    },
+    {
+      "slug": "candidate-item",
+      "name": "Candidate fixture",
+      "field": "Number theory",
+      "statement": "A fixed candidate test statement.",
+      "resolution": "candidate",
+      "solveType": "proved",
+      "aiContribution": "ai-co-developed",
+      "verification": "lean-verified",
+      "sourceUrl": "https://example.org/candidate",
+      "sourceName": "Candidate source",
+      "links": [],
+      "relations": [],
+      "humanCollaborators": []
+    },
+    {
+      "slug": "retracted-item",
+      "name": "Retracted fixture",
+      "field": "Geometry",
+      "statement": "A fixed retracted test statement.",
+      "resolution": "retracted",
+      "solveType": "retracted",
+      "aiContribution": null,
+      "verification": "rejected",
+      "sourceUrl": "https://example.org/retracted",
+      "sourceName": "Retracted source",
+      "links": [],
+      "relations": [],
+      "humanCollaborators": []
+    }
+  ]
+}

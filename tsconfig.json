@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "allowJs": false,
+    "baseUrl": ".",
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["node", "vitest/globals"]
+  },
+  "include": [".astro/types.d.ts", "**/*.astro", "**/*.ts"],
+  "exclude": ["dist", "node_modules"]
+}

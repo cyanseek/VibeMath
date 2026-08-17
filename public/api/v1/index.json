@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-17T15:54:39.560Z",
+  "sources": [
+    {
+      "id": "vibemathed",
+      "url": "https://vibemathed.com/api/dataset",
+      "license": "CC BY 4.0"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "coverage": "Federated schema with 5 records in the bundled VibeMathed snapshot; not a complete map of mathematics.",
+  "data": {
+    "endpoints": [
+      "latest.json",
+      "replay-ready.json",
+      "problems.json",
+      "events.json"
+    ],
+    "counts": {
+      "problems": 5,
+      "events": 5
+    }
+  },
+  "build_id": "sha256:7c30d915d18d31c5b793136ee662e2da00c85dd320162b63af643cdb555efb35"
+}

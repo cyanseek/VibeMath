@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { normalizedData } from "../lib/data";
+const conflicts = normalizedData.problems.filter((problem) => {
+  const statuses = new Set(
+    normalizedData.sourceAssertions
+      .filter((assertion) => assertion.problem_id === problem.id)
+      .map((assertion) => assertion.status),
+  );
+  return statuses.size > 1 || problem.current_status === "contested";
+});
+---
+
+<BaseLayout title="Source conflicts — VibeMath">
+  <section class="shell narrow">
+    <p class="eyebrow">Evidence ledger</p>
+    <h1>Conflicts stay visible.</h1>
+    <p>
+      VibeMath stores each source assertion separately. Aggregation never
+      overwrites disagreement such as “resolved” versus “candidate” versus
+      “open.”
+    </p>
+    {
+      conflicts.length === 0 ? (
+        <div class="empty">
+          <h3>No cross-source conflict in this seed snapshot.</h3>
+          <p>
+            The first release has one upstream adapter, so this is expected.
+            Conflict preservation is covered by the schema and synthetic tests;
+            no real conflict is fabricated for display.
+          </p>
+        </div>
+      ) : (
+        conflicts.map((problem) => (
+          <article>
+            <h3>{problem.title.original}</h3>
+          </article>
+        ))
+      )
+    }
+  </section>
+</BaseLayout>

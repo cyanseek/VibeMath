@@ -1,0 +1,73 @@
+---
+import ProblemCard from "../../components/ProblemCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { normalizedData, replayCandidates, snapshot } from "../../lib/data";
+const base = import.meta.env.BASE_URL;
+const problems = normalizedData.problems.slice(0, 4);
+---
+
+<BaseLayout
+  lang="zh-CN"
+  title="VibeMath — AI 数学前沿的实时索引、证据账本与 Agent 入口"
+  description="看清 AI 在数学中解决了什么、什么仍然开放，以及下一步值得尝试什么。"
+>
+  <section class="hero">
+    <p class="eyebrow">AI 数学前沿的实时索引、证据账本与 Agent 入口</p>
+    <h1>VibeMath</h1>
+    <p class="subtitle">
+      看清 AI 在数学中解决了什么、什么仍然开放，以及下一步值得尝试什么。
+    </p>
+    <p class="promise">
+      面向人和 Agent 的开放地图：数学问题、AI
+      尝试、部分进展、解决声明、验证证据、方法族和可 Replay 机会。
+    </p>
+    <div class="hero-actions">
+      <a class="button" href={`${base}frontier/`}>搜索前沿</a>
+      <a class="button secondary" href={`${base}replay-ready/`}
+        >交给 Low-Hanging Fruit 继续攻关</a
+      >
+      <a class="button secondary" href={base}>English</a>
+    </div>
+  </section>
+  <section class="shell">
+    <p class="coverage">
+      当前页面使用生成于 {snapshot.generated.slice(0, 10)} 的内置 VibeMathed 启动快照；它不是全部数学开放问题数据库。联网运行
+      <code>pnpm sync</code> 可导入完整上游数据。
+    </p>
+    <h2>最新条目</h2>
+    <div class="grid">
+      {
+        problems.map((problem) => (
+          <ProblemCard
+            problem={problem}
+            replay={replayCandidates.some(
+              (item) => item.problem_id === problem.id,
+            )}
+          />
+        ))
+      }
+    </div>
+
+    <h2>与相邻项目的关系</h2>
+    <p>
+      VibeMathed 重点记录 AI 参与解决的数学问题。VibeMath
+      绘制完整动态前沿：仍开放的问题、AI
+      尝试、部分进展、解决声明、验证状态、方法族，以及下一步值得尝试什么。
+    </p>
+    <p>
+      <strong
+        >VibeMath 是独立开源项目，与 VibeMathed 及 BlinkDL/VibeMath
+        无隶属或官方合作关系。</strong
+      >
+    </p>
+    <pre
+      class="relation">VibeMath
+实时前沿、状态、证据、搜索
+        │
+        ▼
+Low-Hanging Fruit
+机会排序、Campaign、Pilot、验证
+        │
+        └──── 候选证据 ────▶ VibeMath 审核队列</pre>
+  </section>
+</BaseLayout>
